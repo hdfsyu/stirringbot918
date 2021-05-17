@@ -1,5 +1,5 @@
 # STIRRINGBOT918
-This is a kool bot but now... U CAN HOST IT UR OWN! And also if ur just looking for the source code then here it is. Make sure u have node.js and npm. Lets get to running.
+This is a kool bot but now... U CAN HOST IT UR OWN! And also if ur just looking for the source code then here it is. Make sure u have node.js and npm. And download the master branch of this project. Lets get to running.
 # Running
 Before u run the bot make a file called ".env" in the root of the project, and open it with notepad and type this: "DISCORD_TOKEN = ur bot token" NO QUOTATIONS IN THE FILE OR IT WILL GET CORRUPTED! Replace ur bot token with ur discord bot token! Go to https://discord.com/developers to setup a bot!
 If u do not wanna host the bot urself go to https://discord.com/oauth2/authorize?client_id=814330255002042378&scope=bot&permissions=2147483647
