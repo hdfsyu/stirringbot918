@@ -4,6 +4,18 @@ let client = new Discord.Client();
 
 let prefix = '!';
 
+const fs = require('fs');
+
+client.commands = new Discord.Collection();
+
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+for(const file of commandFiles){
+    const command = require(`./commands/${file}`);
+
+    client.commands.set(command.name, command);
+}
+
+
 require('dotenv').config();
 
 client.once('ready', () => {
@@ -69,6 +81,9 @@ client.on('message', message =>{
         message.channel.send('suck');
         message.channel.send('lazy');
         message.channel.send('abc');
+        message.channel.send('ep');
+        message.channel.send('ogi');
+        message.channel.send('pineapple');
         message.channel.send('embed');
         message.channel.send('clock');
         message.channel.send('secret');
@@ -79,6 +94,8 @@ client.on('message', message =>{
         message.channel.send('FREEMCALTSNOVIRUS');
         message.channel.send('pig');
         message.channel.send('icky');
+        message.channel.send('srck');
+        message.channel.send('0');
         message.channel.send('tommyinnit');
         message.channel.send('minecraft');
         message.channel.send('discordbotlist');
@@ -90,6 +107,7 @@ client.on('message', message =>{
         message.channel.send('gamemode2');
         message.channel.send('gamemode3');
         message.channel.send('gottago');
+        message.channel.send('bonjour');
         message.channel.send('canihavedankstirring');
         message.channel.send('chugjugwithme');
         message.channel.send('areyouhuman');
@@ -136,18 +154,18 @@ client.on('message', message =>{
         message.channel.send('@everyone got killed by StirringBot918');
     } else if (command == 'bit'){
         message.channel.send('64 bits 32 bits 16 bits 8 bits 4 BITS 2 BITS! 1 BIT HALF BIT QUARTER BIT THE WRIST GAMEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!!!!!!!!!!!!!!');
-    } else if (command == 'rules'){
-        message.channel.send('Rules: Rule 1: NEVER EVER SPAM MY COMMNDS Rule 2: If you need help on this bot contact @StirringBird918 a.k.a @imthedis Rule 3: Never ask the creator to put violent stuff as commands Rule 4: Never EVER ping the creator for fun and btw these rules apply to ALL of the bots that I create ok thats it for rules');
+    } else if (command == 'rules'){ // rules
+        message.channel.send('Rules: Rule 1: NEVER EVER SPAM MY COMMNDS Rule 2: If you need help on this bot contact @im the dis#0522 Rule 3: Never ask the creator to put violent stuff as commands Rule 4: Never EVER ping the creator for fun and btw these rules apply to ALL of the bots that I create ok thats it for rules');
     } else if (command == 'canihavedankstirring'){
         message.channel.send('no not yet just ping the dev to get it online (if it is already online then do !dum cuz ur doing this command AND READ THE RULES !rules)');
     } else if (command == 'aboutbot'){ // bot version
-        message.channel.send('Version: Release 1.17');
+        message.channel.send('Version: Release 2.8 btw shoutout to codelyon for teaching me how 2 make bots');
     } else if (command == 'imthedis'){
         message.channel.send('@imthecord');
     } else if (command == 'joke'){
         message.channel.send('What music do Minecraft Bedrock players listen to? Bedrock & roll XD funny right?');
     } else if (command == 'emotional'){
-        message.channel.send('Awww JUST GET RID OF THE EMOTIONS AND DO !poglin TO MAKE YOU FEEL BETTER and if the dank bot is not online just to !joke');
+        message.channel.send('Awww JUST GET RID OF THE EMOTIONS AND DO !poglin TO MAKE YOU FEEL BETTER and if the dank bot is not online just do !joke');
     } else if (command == 'respawn'){
         message.channel.send('(insert ur username here) got respawned by StirringBot918');
     } else if (command == 'respawn@a'){
@@ -193,7 +211,7 @@ client.on('message', message =>{
     } else if (command == 'whichlangdoucodein'){
         message.channel.send('I code in JS a.k.a JavaScript');
     } else if (command == 'whichprogramdouusetocode'){
-        message.channel.send('node.js and NPM');
+        message.channel.send('node.js');
     } else if (command == 'turtle'){
         message.channel.send('Applied effect Slowness to (insert ur username here)');
     } else if (command == 'turt'){
@@ -202,8 +220,8 @@ client.on('message', message =>{
         message.channel.send('emogi');
     } else if (command == 'changelog'){ //changelog
         message.channel.send('Changelog:');
-        message.channel.send('NEW EMBED WOOHOO WE GOT EMBEDS POG');
-        message.channel.send('embed clock minecraft tommyinnit (btw tommyinnit is not a embed)');
+        message.channel.send('Command(s)');
+        message.channel.send('play and leave (yep thats right we got a music bot runnin)');
     } else if (command == 'discordbotlist'){
         message.channel.send('https://discordbotlist.com/bots/stirringbot918');
     } else if (command == 'amongusairshipmap'){
@@ -211,7 +229,7 @@ client.on('message', message =>{
     } else if (command == 'howareudoing'){
         message.channel.send('THIS HAS BEEN THE BEST MONTH EVER');
     } else if (command == 'pinger'){
-        message.channel.send('@everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone');
+        message.channel.send('@everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone @everyone');
     } else if (command == 'bored'){
         message.channel.send('DEAL WITH IT XD UR STUPID');
     } else if (command == 'swear'){
@@ -273,6 +291,35 @@ client.on('message', message =>{
         message.channel.send(minecraft);
     } else if (command == 'tommyinnit'){
         message.channel.send('https://discord.gg/innit is that what u wanted...?');
+    } else if (command == 'bobux'){
+        const bobux = new Discord.MessageEmbed()
+        .setTitle('b o b u x')
+        .setColor('#15c22c')
+        .setDescription('gimme da bobux')
+        .setFooter('dabobux')
+        .setURL('https://www.roblox.com')
+        .setImage('https://static.wikia.nocookie.net/roblox/images/3/34/Robux_2019_gold.svg/revision/latest/scale-to-width-down/512?cb=20191122105651')
+        message.channel.send(bobux);
+    } else if (command == 'seck'){
+        message.channel.send("gg u just found the secret cmd! GOOD JOB I will give u my friend's discord email and password");
+        message.channel.send("email: viyaanchauhan@icloud.com");
+        message.channel.send("password: Maanvik123");
+    } else if (command == 'srck'){
+        message.channel.send('warmer');
+    } else if (command == 'ep'){
+        message.channel.send('now at this point im just making random cmds');
+    } else if (command == 'ogi'){
+        message.channel.send('nikki');
+    } else if (command == 'pineapple'){
+        message.channel.send('PINAPPLE PIZZA! :D');
+    } else if (command == '0'){
+        message.channel.send('1');
+    } else if (command == 'bonjour'){
+        client.commands.get('bonjour').execute(message, args);
+    } else if (command == 'play'){
+        client.commands.get('play').execute(message, args);
+    } else if (command == 'leave'){
+        client.commands.get('leave').execute(message, args);
     }},)
     
    //client login dont change!
