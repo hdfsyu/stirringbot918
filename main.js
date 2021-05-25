@@ -96,6 +96,8 @@ client.on('message', message =>{
         message.channel.send('icky');
         message.channel.send('srck');
         message.channel.send('0');
+        message.channel.send('forget');
+        message.channel.send('shutup');
         message.channel.send('tommyinnit');
         message.channel.send('minecraft');
         message.channel.send('discordbotlist');
@@ -159,7 +161,7 @@ client.on('message', message =>{
     } else if (command == 'canihavedankstirring'){
         message.channel.send('no not yet just ping the dev to get it online (if it is already online then do !dum cuz ur doing this command AND READ THE RULES !rules)');
     } else if (command == 'aboutbot'){ // bot version
-        message.channel.send('Version: Release 2.8 btw shoutout to codelyon for teaching me how 2 make bots');
+        message.channel.send('Version: Release 3.0 btw shoutout to codelyon for teaching me how 2 make bots');
     } else if (command == 'imthedis'){
         message.channel.send('@imthecord');
     } else if (command == 'joke'){
@@ -221,7 +223,7 @@ client.on('message', message =>{
     } else if (command == 'changelog'){ //changelog
         message.channel.send('Changelog:');
         message.channel.send('Command(s)');
-        message.channel.send('play and leave (yep thats right we got a music bot runnin)');
+        message.channel.send('shutup and forget');
     } else if (command == 'discordbotlist'){
         message.channel.send('https://discordbotlist.com/bots/stirringbot918');
     } else if (command == 'amongusairshipmap'){
@@ -320,6 +322,17 @@ client.on('message', message =>{
         client.commands.get('play').execute(message, args);
     } else if (command == 'leave'){
         client.commands.get('leave').execute(message, args);
+    } else if (command == 'forget'){
+        message.channel.send('alright I will forget you forever');
+    } else if (command == 'shutup'){
+        const shutup = new Discord.MessageEmbed()
+        .setTitle('ok how about this?')
+        .setColor('#53bd2f')
+        .setDescription('HOW ABOUT U SHUT UP!?')
+        .setFooter('yea description is right')
+        .setURL('shutup.com')
+        .setImage('https://27i1vg4d30zd8sfa41nrhds1-wpengine.netdna-ssl.com/wp-content/uploads/2017/02/Shut-Up-page-header-final.jpg')
+        message.channel.send(shutup);
     }},)
     
    //client login dont change!
