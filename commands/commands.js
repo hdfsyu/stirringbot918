@@ -1,4 +1,4 @@
-
+// I added this because its more faster than having an entire command list in main.js so its more clean
 module.exports = {
     name: 'commands',
     description: 'I need help with this stupid bot',
