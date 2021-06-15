@@ -1,3 +1,4 @@
+//start of file
 let Discord = require('discord.js');
 
 let client = new Discord.Client();
@@ -80,7 +81,7 @@ client.on('message', message =>{
     } else if (command == 'canihavedankstirring'){
         message.channel.send('no not yet just ping the dev to get it online (if it is already online then do !dum cuz ur doing this command AND READ THE RULES !rules)');
     } else if (command == 'aboutbot'){ // bot version
-        message.channel.send('Version: Release 3.0 btw shoutout to codelyon for teaching me how 2 make bots');
+        message.channel.send('Version: Release 3.1 btw shoutout to codelyon for teaching me how 2 make bots');
     } else if (command == 'imthedis'){
         message.channel.send('@imthecord');
     } else if (command == 'joke'){
@@ -252,8 +253,10 @@ client.on('message', message =>{
         .setURL('shutup.com')
         .setImage('https://27i1vg4d30zd8sfa41nrhds1-wpengine.netdna-ssl.com/wp-content/uploads/2017/02/Shut-Up-page-header-final.jpg')
         message.channel.send(shutup);
+    } else if (command == 'spong'){
+        message.channel.send('https://dsc.gg/sponge')
     }},)
     
-   //client login dont change!
+//client login dont change!
 client.login(process.env.DISCORD_TOKEN);
-// END OF FILE
+//END OF FILE
