@@ -224,8 +224,7 @@ client.on('message', message =>{
         message.channel.send(bobux);
     } else if (command == 'seck'){
         message.channel.send("gg u just found the secret cmd! GOOD JOB I will give u my friend's discord email and password");
-        message.channel.send("email: viyaanchauhan@icloud.com");
-        message.channel.send("password: Maanvik123");
+        message.channel.send("jk loser");
     } else if (command == 'srck'){
         message.channel.send('warmer');
     } else if (command == 'ep'){
